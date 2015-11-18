@@ -18,8 +18,9 @@
 	)
   (:goal
 	(and
-	  (HobbitOnPlatform frodo b1)
-	  (HaveLine frodo frodoLine)
+	  (HobbitOnPlatform frodo b2)
+	  ;(HaveLine frodo frodoLine)
+	  (ConnectedWithLine b3 b2)
 	  )
 	)
 
