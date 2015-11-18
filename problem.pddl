@@ -6,21 +6,28 @@
 	frodo sam - hobbit
 	)
   (:init
+  
 	(Vertical b2 b3)
 	(Vertical b1 b2)
 	(Horizontal a1 b1)
 	(Horizontal b1 a1)
-	(HobbitOnPlatform frodo b3)
+	
+	(HobbitOnPlatform frodo b2)
+	(ConnectedWithLine b2 b3 frodoLine)
+	
+	
 	(BushOnPlatform b3)
 	(BushOnPlatform b2)
-	(HaveLine frodo frodoLine)
+	
+	;(HaveLine frodo frodoLine)
 	(HaveLine sam samLine)
+	
 	)
   (:goal
 	(and
-	  (HobbitOnPlatform frodo b2)
-	  ;(HaveLine frodo frodoLine)
-	  (ConnectedWithLine b3 b2)
+	  ;(HobbitOnPlatform frodo b2)
+	  (HaveLine frodo frodoLine)
+	  ;(ConnectedWithLine b3 b2)
 	  )
 	)
 
