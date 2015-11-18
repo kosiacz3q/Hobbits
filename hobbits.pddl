@@ -14,7 +14,7 @@
 		
 		(ConnectedWithLine ?p1 ?p2 ?l)
 		
-		
+		(LineOnGround ?p - platform ?l - line)
 	)
 	
 	(:action UseLine
@@ -74,18 +74,45 @@
 		)
 	)
 	
-	;(:action GoHorizontal
-	;	:parameters (?from ?to - platform ?h - hobbit)
-	;	:precondition
-	;	(and
-	;	
-	;	)
-	;	:effect
-	;	(and
-	;	
-	;	)
-	;)
+	(:action GoHorizontal
+		:parameters (?from ?to - platform ?h - hobbit)
+		:precondition
+		(and
+			(Horizontal ?from ?to)
+			(HobbitOnPlatform ?h ?from)
+		)
+		:effect
+		(and
+			(not (HobbitOnPlatform ?h ?from))
+			(HobbitOnPlatform ?h ?to)
+		)
+	)
 	
+	(:action PutLineOnGround
+		:parameters (?where - platform ?h - hobbit ?l - line)
+		:precondition
+		(and
+			(HobbitOnPlatform ?h ?where)
+			(HaveLine ?h ?l)
+		)
+		:effect
+		(and
+			(LineOnGround ?where ?l)
+			(not (HaveLine ?h ?l))
+		)	
+	)
 	
-	
+	(:action GetFromGroundGround
+		:parameters (?where - platform ?h - hobbit ?l - line)
+		:precondition
+		(and
+			(HobbitOnPlatform ?h ?where)
+			(LineOnGround ?where ?l)
+		)
+		:effect
+		(and
+			(not (LineOnGround ?where ?l))
+			(HaveLine ?h ?l)
+		)	
+	)
 )
