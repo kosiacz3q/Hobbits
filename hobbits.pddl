@@ -52,7 +52,7 @@
 	)
 	
 	(:action GoHorizontal
-		:parameters (?from ?to - platform ?h -hobbit)
+		:parameters (?from ?to - platform ?h - hobbit)
 		:precondition
 		(and
 		
