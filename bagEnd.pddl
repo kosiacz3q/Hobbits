@@ -20,7 +20,7 @@
 		:precondition
 		(and
 			(not (= ?up ?bottom))
-			(HobbitOnPlatform ?up)
+			(HobbitOnPlatform ?h ?up)
 			(Vertical ?bottom ?up)
 			(HaveLine ?h ?l)
 			(BushOnPlatform ?up)
@@ -29,6 +29,7 @@
 		:effect
 		(and
 			(ConnectedWithLine ?up ?bottom)
+			(not (HaveLine ?h ?l))
 		)
 	)
 	
@@ -41,12 +42,25 @@
 				(ConnectedWithLine ?from ?to)
 				(ConnectedWithLine ?to ?from)
 			)
-			(HobbitOnPlatform ?from)
+			(HobbitOnPlatform ?h ?from)
 		)
 		:effect
 		(and
-			(not (HobbitOnPlatform ?from))
-			(HobbitOnPlatform ?to)
+			(not (HobbitOnPlatform ?h ?from))
+			(HobbitOnPlatform ?h ?to)
 		)
 	)
+	
+	(:action GoHorizontal
+		:parameters (?from ?to - platform ?h -hobbit)
+		:precondition
+		(and
+		
+		)
+		:effect
+		(and
+		
+		)
+	)
+	
 )
