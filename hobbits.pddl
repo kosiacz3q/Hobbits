@@ -60,7 +60,7 @@
 		:precondition
 		(and
 			(not (= ?from ?src))
-			(HobbitOnPlatform ?from ?h)
+			(HobbitOnPlatform ?h ?from)
 			(or
 				(ConnectedWithLine ?src ?from ?l)
 				(ConnectedWithLine ?from ?src ?l)
@@ -74,17 +74,17 @@
 		)
 	)
 	
-	(:action GoHorizontal
-		:parameters (?from ?to - platform ?h - hobbit)
-		:precondition
-		(and
-		
-		)
-		:effect
-		(and
-		
-		)
-	)
+	;(:action GoHorizontal
+	;	:parameters (?from ?to - platform ?h - hobbit)
+	;	:precondition
+	;	(and
+	;	
+	;	)
+	;	:effect
+	;	(and
+	;	
+	;	)
+	;)
 	
 	
 	

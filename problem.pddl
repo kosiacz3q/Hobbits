@@ -12,20 +12,18 @@
 	(Horizontal a1 b1)
 	(Horizontal b1 a1)
 	
-	(HobbitOnPlatform frodo b2)
-	(ConnectedWithLine b2 b3 frodoLine)
-	
+	(HobbitOnPlatform frodo b3)
 	
 	(BushOnPlatform b3)
 	(BushOnPlatform b2)
 	
-	;(HaveLine frodo frodoLine)
+	(HaveLine frodo frodoLine)
 	(HaveLine sam samLine)
 	
 	)
   (:goal
 	(and
-	  ;(HobbitOnPlatform frodo b2)
+	  (HobbitOnPlatform frodo b1)
 	  (HaveLine frodo frodoLine)
 	  ;(ConnectedWithLine b3 b2)
 	  )
