@@ -10,7 +10,7 @@
 	(Vertical b1 b2)
 	(Horizontal a1 b1)
 	(Horizontal b1 a1)
-	(FrodoOnPlatform b3)
+	(HobbitOnPlatform frodo b3)
 	(BushOnPlatform b3)
 	(BushOnPlatform b2)
 	(HaveLine frodo frodoLine)
