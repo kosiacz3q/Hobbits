@@ -18,7 +18,7 @@
 	)
   (:goal
 	(and
-	  (FrodoOnPlatform b1)
+	  (HobbitOnPlatform frodo b1)
 	  (HaveLine frodo frodoLine)
 	  )
 	)
