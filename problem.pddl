@@ -1,15 +1,26 @@
 (define (problem test)
-	(:domain hobbits)
-	(:objects
-		;z1 z2 z3 z4 n1 n2 n3 n4 n5 c1 c2 p1 p2 r1 - key
+  (:domain hobbits)
+  (:objects
+	a1 b1 b2 b3 - platform
+	samLine frodoLine - line  
+	frodo sam - hobbit
 	)
-	(:init
-		
+  (:init
+	(Vertical b2 b3)
+	(Vertical b1 b2)
+	(Horizontal a1 b1)
+	(Horizontal b1 a1)
+	(FrodoOnPlatform b3)
+	(BushOnPlatform b3)
+	(BushOnPlatform b2)
+	(HaveLine frodo frodoLine)
+	(HaveLine sam samLine)
 	)
-	(:goal
-		(and
-			;lol
-		)
+  (:goal
+	(and
+	  (FrodoOnPlatform b1)
+	  (HaveLine frodo frodoLine)
+	  )
 	)
-	
-)
+
+  )
