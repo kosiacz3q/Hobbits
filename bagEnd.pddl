@@ -1,7 +1,7 @@
 (define
 	(domain hobbits)
 	(:requirements :adl)
-	(:types platform hobbit)
+	(:types platform hobbit line)
 	(:predicates
 		(SamOnPlatform ?p - platform)
 		(FrodoOnPlatform ?p - platform)
@@ -12,12 +12,13 @@
 		
 		(HobbitOnPlatform ?p - platform)
 		
-		(SamHaveLine)
-		(FrodoHaveLine)
+		(HaveLine ?h - hobbit ?l - line)
+		
+		(ConnectedWithLine ?p1 ?p2)
 	)
 	
-	(:action wez
-		:parameters(?k)
+	(:action UseLine
+		:parameters(?up ?bottom ?)
 		:precondition
 		(and
 
